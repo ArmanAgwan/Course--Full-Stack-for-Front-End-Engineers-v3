@@ -82,7 +82,7 @@
 */
 
 
-// DNS :- Domain Name System
+// DNS : Domain Name System
 
 // Domain name :- A Domain name is basically the name or address of the website that users type in URL to visit a website.
 
@@ -110,7 +110,7 @@
 */
 
 
-// Anatomy of a URL (diagram) :-
+// Anatomy of a URL (diagram) 
 
 // URL => uniform resource locator
 
@@ -139,7 +139,8 @@ query parameter => test=true
 
 
 
-//----- (05) - (Buying a Domain Name)
+               //----------Buying a Domain Name-----------//
+
 
 // Exercise
 
@@ -163,12 +164,12 @@ query parameter => test=true
 // Brand new server
 
 /*
-    1.) Update software
-    2.) Restart your server
-    3.) create a new user
-    4.) make that user a *superuser*
-    5.) enable login for new user
-    6.) disable root login
+    1- Update software
+    2- Restart your server
+    3- create a new user
+    4- make that user a *superuser*
+    5- enable login for new user
+    6- disable root login
 */
 
 
@@ -205,15 +206,15 @@ query parameter => test=true
 // creating and updating users
 
 /*
-    1.) create a new user
+    1- create a new user
     // adduser <your_username>
 
-    2.) add user to "sudo" group
+    2- add user to "sudo" group
     // usermod -aG sudo <your_username>
 
-    3.) switch user
+    3- switch user
     // su <your_username>
 
-    4.) check sudo access
+    4- check sudo access
     // sudo cat /var/log/auth.log
 */    
