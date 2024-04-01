@@ -1,69 +1,69 @@
-//----------Realtime & Database----------//
+// //----------Realtime & Database----------//
 
-* Websockets
-* Files
-* Databasees
+// * Websockets
+// * Files
+// * Databasees
 
-//----------Websockets----------//
+// //----------Websockets----------//
 
-1- Update nginx configuration
-2- Create a new nodejs server
-3- Enable websockets 
+// 1- Update nginx configuration
+// 2- Create a new nodejs server
+// 3- Enable websockets 
 
----> Websockets: Persistent bidirection connection between client
-                 and server. 
-
-
-location / {
-   proxy_set_header Upgrade $http_upgrade:
-   proxy_set_header Connection "upgrade";
-
-   proxy_pass http://127.0.0.1:3000;
-}    
+// ---> Websockets: Persistent bidirection connection between client
+//                  and server. 
 
 
-const express = require('express');
-const server = require('http').createServer();
-const app = express();
+// location / {
+//    proxy_set_header Upgrade $http_upgrade:
+//    proxy_set_header Connection "upgrade";
 
-app.get('/', function(req, res) {
-    res.sendFile('index.html', {root: _dirname});
-});
-
-server.on('request', app);
-server.listen(3000, function () {console.log('Listening on 3000'); });
+//    proxy_pass http://127.0.0.1:3000;
+// }    
 
 
-//----------Database----------//
+// const express = require('express');
+// const server = require('http').createServer();
+// const app = express();
 
-       -----Relational-----
+// app.get('/', function(req, res) {
+//     res.sendFile('index.html', {root: _dirname});
+// });
 
-* SQL
-* tables
-* Realated data
-* Strict structure
+// server.on('request', app);
+// server.listen(3000, function () {console.log('Listening on 3000'); });
 
-      -----Non-relational-----
 
-* No SQL
-* Data agnostic
-* Loose structure
+// //----------Database----------//
+
+//        -----Relational-----
+
+// * SQL
+// * tables
+// * Realated data
+// * Strict structure
+
+//       -----Non-relational-----
+
+// * No SQL
+// * Data agnostic
+// * Loose structure
 
 
         
-      USERS                                  PETS
+//       USERS                                  PETS
                                                 
-     userID     --------------------->       petID
-      name   ----|                            userID
-     localtion   |                             name   
-      email      |                             type 
-                 |
-                 |
-                 |
-                 |------>       FOOD
+//      userID     --------------------->       petID
+//       name   ----|                            userID
+//      localtion   |                             name   
+//       email      |                             type 
+//                  |
+//                  |
+//                  |
+//                  |------>       FOOD
                                 
-                               foodID
-                               userID
-                                name
-                                type
-                               spicy 
+//                                foodID
+//                                userID
+//                                 name
+//                                 type
+//                                spicy 
