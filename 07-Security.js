@@ -22,13 +22,13 @@
 //       process or network service. 
 
 // //-----See well known ports
-// less /etc/services
+// less /etc/services                            
 
-//             //----------nmap----------//
+//             //----------nmap----------//     -----> network mapper 
 
 
 // 1- Install nmap
-// // sudo apt install namp
+// // sudo apt install namp                
 
 // 2- Run nmap
 // // nmap <your_server_ip>
